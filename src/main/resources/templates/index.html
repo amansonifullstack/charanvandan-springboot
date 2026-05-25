@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Charanvandan - India's Trusted Crowdfunding Platform</title>
+  <meta name="description" content="Charanvandan helps raise funds for medical, education, social and spiritual causes with transparency and trust."/>
+  <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <a href="#hero" class="navbar-logo">
+    <img th:src="@{/images/logo.png}" alt="Charanvandan Logo"/>
+    <span>Charanvandan</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About Us</a></li>
+    <li><a href="#campaigns">Campaigns</a></li>
+    <li><a href="#impact">Impact</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="btn-nav">Start a Campaign</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About Us</a>
+  <a href="#campaigns">Campaigns</a>
+  <a href="#impact">Impact</a>
+  <a href="#contact">Contact</a>
+  <a href="#contact" class="btn-primary" style="text-align:center;">Start a Campaign</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="hero-bg">
+    <img th:src="@{/images/hero.png}" alt="Community helping each other"/>
+    <div class="hero-overlay"></div>
+    <div class="hero-overlay-bottom"></div>
+  </div>
+  <div class="hero-content container">
+    <span class="hero-badge">India's Trusted Crowdfunding Platform</span>
+    <h1>Empower Hope.<br/><span>Transform Lives.</span></h1>
+    <p>Join a compassionate community dedicated to raising funds for medical, educational, social, and spiritual causes. Transparency and trust at every step.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">Start a Campaign</a>
+      <a href="#campaigns" class="btn-outline">Explore Campaigns</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT / MISSION ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div>
+        <span class="section-tag fade-up">Our Story</span>
+        <h2 class="section-title fade-up fade-up-delay-1">A Platform Built on Faith, Hope &amp; Community</h2>
+        <p class="section-subtitle fade-up fade-up-delay-2" style="margin-bottom:1.5rem;">
+          Charanvandan was founded with one simple belief — that every person deserves access to support when they need it most.
+          We bridge the gap between those in need and the compassionate many who wish to help, rooted in India's timeless values of seva (service) and karuna (compassion).
+        </p>
+        <p class="section-subtitle fade-up fade-up-delay-2">
+          With full transparency at every step, your contribution reaches exactly where it's meant to — touching real lives, restoring real hope.
+        </p>
+        <div class="about-stats fade-up fade-up-delay-3">
+          <div class="about-stat"><span>2018</span><span>Founded</span></div>
+          <div class="about-stat"><span>28+</span><span>States Reached</span></div>
+          <div class="about-stat"><span>100%</span><span>Transparent</span></div>
+        </div>
+        <div class="about-values">
+          <div class="value-card fade-up">
+            <div class="value-icon">&#128269;</div>
+            <div>
+              <h4>Transparency</h4>
+              <p>Every rupee tracked. Full accountability from campaign creation to fund usage.</p>
+            </div>
+          </div>
+          <div class="value-card fade-up fade-up-delay-1">
+            <div class="value-icon">&#10024;</div>
+            <div>
+              <h4>Trust</h4>
+              <p>Verified campaigns and secure payments so donors give with complete confidence.</p>
+            </div>
+          </div>
+          <div class="value-card fade-up fade-up-delay-2">
+            <div class="value-icon">&#10084;&#65039;</div>
+            <div>
+              <h4>Compassion</h4>
+              <p>We treat every campaign with empathy, dignity, and the urgency it deserves.</p>
+            </div>
+          </div>
+          <div class="value-card fade-up fade-up-delay-3">
+            <div class="value-icon">&#127968;</div>
+            <div>
+              <h4>Community</h4>
+              <p>A nationwide network of givers and receivers, united by purpose and love.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-image-wrap fade-up">
+        <img th:src="@{/images/social.png}" alt="Community impact"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CAMPAIGNS / SERVICES ===== -->
+<section class="campaigns" id="campaigns">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag fade-up">Areas of Impact</span>
+      <h2 class="section-title fade-up fade-up-delay-1">Causes We Support</h2>
+      <p class="section-subtitle fade-up fade-up-delay-2">Choose a cause close to your heart and make a tangible difference in someone's life today.</p>
+    </div>
+    <div class="campaigns-grid">
+      <div class="campaign-card fade-up">
+        <div class="campaign-img-wrap">
+          <img th:src="@{/images/medical.png}" alt="Medical"/>
+          <div class="campaign-overlay"></div>
+        </div>
+        <div class="campaign-body">
+          <h3>Medical</h3>
+          <p>Support life-saving treatments, surgeries, and essential healthcare for those who cannot afford it.</p>
+          <button class="btn-donate" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Donate Now</button>
+        </div>
+      </div>
+      <div class="campaign-card fade-up fade-up-delay-1">
+        <div class="campaign-img-wrap">
+          <img th:src="@{/images/education.png}" alt="Education"/>
+          <div class="campaign-overlay"></div>
+        </div>
+        <div class="campaign-body">
+          <h3>Education</h3>
+          <p>Empower the next generation by funding school fees, supplies, and educational infrastructure.</p>
+          <button class="btn-donate" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Donate Now</button>
+        </div>
+      </div>
+      <div class="campaign-card fade-up fade-up-delay-2">
+        <div class="campaign-img-wrap">
+          <img th:src="@{/images/social.png}" alt="Social Impact"/>
+          <div class="campaign-overlay"></div>
+        </div>
+        <div class="campaign-body">
+          <h3>Social Impact</h3>
+          <p>Contribute to community welfare, disaster relief, animal welfare, and hunger eradication.</p>
+          <button class="btn-donate" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Donate Now</button>
+        </div>
+      </div>
+      <div class="campaign-card fade-up fade-up-delay-3">
+        <div class="campaign-img-wrap">
+          <img th:src="@{/images/spiritual.png}" alt="Spiritual"/>
+          <div class="campaign-overlay"></div>
+        </div>
+        <div class="campaign-body">
+          <h3>Spiritual</h3>
+          <p>Fund temple restorations, gaushalas, spiritual gatherings, and heritage preservation.</p>
+          <button class="btn-donate" onclick="document.querySelector('#contact').scrollIntoView({behavior:'smooth'})">Donate Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IMPACT / TESTIMONIALS ===== -->
+<section class="impact" id="impact">
+  <div class="container impact-inner">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <span class="stat-number" data-target="5" data-prefix="&#8377;" data-suffix=" Cr+">&#8377;0 Cr+</span>
+        <span class="stat-label">Funds Raised</span>
+      </div>
+      <div class="stat-item fade-up fade-up-delay-1">
+        <span class="stat-number" data-target="10000" data-suffix="+">0+</span>
+        <span class="stat-label">Generous Donors</span>
+      </div>
+      <div class="stat-item fade-up fade-up-delay-2">
+        <span class="stat-number" data-target="500" data-suffix="+">0+</span>
+        <span class="stat-label">Successful Campaigns</span>
+      </div>
+      <div class="stat-item fade-up fade-up-delay-3">
+        <span class="stat-number" data-target="95" data-suffix="%">0%</span>
+        <span class="stat-label">Success Rate</span>
+      </div>
+    </div>
+
+    <div class="text-center" style="margin-bottom:3rem;">
+      <h2 class="section-title fade-up" style="color:white;">Stories of Hope</h2>
+      <p class="section-subtitle fade-up fade-up-delay-1" style="color:rgba(255,255,255,0.7);">
+        Every number represents a real life touched by compassion. Hear from the people whose lives were changed.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-up">
+        <div class="quote-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/></svg>
+        </div>
+        <blockquote>"Charanvandan helped us raise funds for my daughter's heart surgery when we had lost all hope. The community here is truly sent by the divine."</blockquote>
+        <div class="testimonial-author">
+          <strong>Ramesh Sharma</strong>
+          <span>Father of Patient, Jaipur</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up fade-up-delay-1">
+        <div class="quote-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/></svg>
+        </div>
+        <blockquote>"We successfully built a community library in our village. The transparency and ease of the platform made donors trust our vision instantly."</blockquote>
+        <div class="testimonial-author">
+          <strong>Anita Desai</strong>
+          <span>Social Worker, Pune</span>
+        </div>
+      </div>
+      <div class="testimonial-card fade-up fade-up-delay-2">
+        <div class="quote-icon">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"/></svg>
+        </div>
+        <blockquote>"Donating through Charanvandan feels right. I receive regular updates, and knowing exactly where my contribution goes gives me immense peace."</blockquote>
+        <div class="testimonial-author">
+          <strong>Vikram Mehta</strong>
+          <span>Regular Donor, Mumbai</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT / CTA ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <span class="section-tag fade-up">Get In Touch</span>
+      <h2 class="section-title fade-up fade-up-delay-1">Start Your Campaign Today</h2>
+      <p class="section-subtitle fade-up fade-up-delay-2">Ready to make a difference? Fill out the form below and our team will guide you through every step of your journey.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info fade-up">
+        <h3>How It Works</h3>
+        <p>Starting a campaign on Charanvandan is simple, transparent, and supported at every stage.</p>
+        <div class="contact-steps">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-text">
+              <strong>Submit Your Campaign</strong>
+              <span>Fill in the form with your campaign details and cause.</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-text">
+              <strong>Verification &amp; Approval</strong>
+              <span>Our team reviews and verifies your campaign within 24 hours.</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-text">
+              <strong>Go Live &amp; Share</strong>
+              <span>Your campaign goes live and we help you reach more donors.</span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-text">
+              <strong>Receive Funds</strong>
+              <span>Funds are disbursed directly and securely to your account.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form fade-up fade-up-delay-1">
+        <!-- Success / Error Alerts -->
+        <div th:if="${formSuccess}" class="alert alert-success" th:text="${formSuccess}"></div>
+        <div th:if="${formError}" class="alert alert-error" th:text="${formError}"></div>
+
+        <form action="/contact" method="post" th:object="${contactForm}">
+          <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" th:if="${_csrf}"/>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name <span class="required">*</span></label>
+              <input type="text" class="form-control" th:field="*{name}" placeholder="Your full name" required/>
+            </div>
+            <div class="form-group">
+              <label>Email Address <span class="required">*</span></label>
+              <input type="email" class="form-control" th:field="*{email}" placeholder="your@email.com" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" class="form-control" th:field="*{phone}" placeholder="+91 98765 43210"/>
+            </div>
+            <div class="form-group">
+              <label>Campaign Type</label>
+              <select class="form-control" th:field="*{campaignType}">
+                <option value="">Select a cause</option>
+                <option value="medical">Medical</option>
+                <option value="education">Education</option>
+                <option value="social">Social Impact</option>
+                <option value="spiritual">Spiritual</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Your Message <span class="required">*</span></label>
+            <textarea class="form-control" th:field="*{message}" rows="4" placeholder="Tell us about your campaign or how we can help..." required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Submit Campaign Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo-wrap">
+          <img th:src="@{/images/logo.png}" alt="Charanvandan"/>
+          <span class="logo-name">Charanvandan</span>
+        </div>
+        <p>India's trusted crowdfunding platform helping raise funds for medical, education, social and spiritual causes with full transparency.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="Facebook">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58a2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#campaigns">Campaigns</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Causes</h4>
+        <ul>
+          <li><a href="#campaigns">Medical</a></li>
+          <li><a href="#campaigns">Education</a></li>
+          <li><a href="#campaigns">Social Impact</a></li>
+          <li><a href="#campaigns">Spiritual</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:support@charanvandan.com">support@charanvandan.com</a></li>
+          <li><a href="tel:+918800000000">+91 8800 000 000</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&#169; 2024 Charanvandan. All rights reserved.</span>
+      <span>Made with purpose, for India.</span>
+    </div>
+  </div>
+</footer>
+
+<script th:src="@{/js/main.js}"></script>
+</body>
+</html>
